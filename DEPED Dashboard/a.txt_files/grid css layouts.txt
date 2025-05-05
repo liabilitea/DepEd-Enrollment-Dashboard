@@ -1,0 +1,97 @@
+# CURRENT HOME DIV LAYOUT 
+.parent {
+display: grid;
+grid-template-columns: repeat(4, 0.5fr) 1fr;
+grid-template-rows: repeat(2, 0.5fr) repeat(3, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 6; } title
+.div2 { grid-area: 2 / 1 / 3 / 2; } card 1
+.div3 { grid-area: 2 / 2 / 3 / 3; } card 2
+.div4 { grid-area: 2 / 3 / 3 / 4; } card 3
+.div5 { grid-area: 2 / 4 / 3 / 5; } card 4
+.div6 { grid-area: 2 / 5 / 4 / 6; } insight 1
+.div7 { grid-area: 3 / 1 / 4 / 5; } insight 2
+.div8 { grid-area: 4 / 5 / 6 / 6; } insight 3
+.div9 { grid-area: 4 / 1 / 5 / 5; } insight 4
+.div10 { grid-area: 5 / 1 / 6 / 3; } insight 5
+.div11 { grid-area: 5 / 3 / 6 / 5; } insight 6
+
+# INSIGHTS DIV LAYOUT
+.parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: 0.5fr repeat(6, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 6; }
+.div2 { grid-area: 2 / 1 / 3 / 6; }
+.div3 { grid-area: 3 / 1 / 4 / 6; }
+.div4 { grid-area: 4 / 1 / 5 / 6; }
+.div5 { grid-area: 5 / 1 / 6 / 6; }
+.div6 { grid-area: 6 / 1 / 7 / 6; }
+.div7 { grid-area: 7 / 1 / 8 / 6; }
+
+# CURRENT - 4/10
+.parent {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(2, 0.5fr) repeat(4, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 7; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div4 { grid-area: 2 / 3 / 3 / 4; }
+.div5 { grid-area: 2 / 4 / 3 / 5; }
+.div6 { grid-area: 3 / 1 / 4 / 5; }
+.div7 { grid-area: 4 / 1 / 5 / 5; }
+.div8 { grid-area: 2 / 5 / 5 / 7; }
+.div9 { grid-area: 6 / 1 / 7 / 3; }
+.div10 { grid-area: 5 / 1 / 6 / 7; }
+.div11 { grid-area: 6 / 3 / 7 / 7; }
+
+# Proposed layout - 0410
+.parent {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(2, 0.5fr) repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 7; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div4 { grid-area: 2 / 3 / 3 / 4; }
+.div5 { grid-area: 2 / 4 / 3 / 5; }
+.div6 { grid-area: 3 / 1 / 4 / 5; }
+.div7 { grid-area: 4 / 1 / 5 / 5; }
+.div8 { grid-area: 2 / 5 / 5 / 7; }
+.div9 { grid-area: 5 / 1 / 6 / 7; }
+.div10 { grid-area: 6 / 1 / 7 / 5; }
+.div11 { grid-area: 6 / 5 / 7 / 7; }
+
+# UPLOAD_CSV CSS 
+.parent {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: 0.5fr repeat(4, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 7; }
+.div2 { grid-area: 2 / 1 / 7 / 7; }
+.div3 { grid-area: 2 / 1 / 3 / 5; }
+.div4 { grid-area: 3 / 1 / 4 / 5; }
+.div5 { grid-area: 2 / 5 / 4 / 7; }
+.div6 { grid-area: 4 / 1 / 5 / 7; }
+.div7 { grid-area: 5 / 1 / 6 / 5; }
+.div8 { grid-area: 5 / 5 / 6 / 7; }

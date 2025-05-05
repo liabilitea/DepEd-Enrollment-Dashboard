@@ -1,0 +1,155 @@
+/* SIDEBAR STYLES */
+.sidebar {
+  width: 250px;
+  background-color: #004080;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  transition: var(--transition);
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 10px;
+  position: relative;
+  background-color: #013A63;
+  height: 50px; /* Set the sidebar header height */
+}
+
+.logo-small {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+.logo-small.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-title.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Sidebar Toggle Button */
+.toggle-button-collapsed,
+.toggle-button-expanded {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button-collapsed {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+}
+
+.toggle-button-expanded {
+  right: 10px;
+  top: 15px;
+  z-index: 10;
+}
+
+/* Navigation Styles */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin-top: 20px; /* Add space after the toggle button */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin: 5px 0;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.link-text {
+  margin-left: 10px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  font-size: 14px; /* Adjust font size for better visibility */
+}
+
+.link-text.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Sidebar Footer Styling */
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+.sidebar-footer .nav-link {
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-footer .nav-link:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Make sure the sidebar content has room for the footer */
+#sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+}
+
+.nav-links {
+  flex-grow: 1;
+}

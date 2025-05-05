@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CONTENT STYLES */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: all 0.3s ease-in-out;
+  width: calc(100% - 250px);
+}
+
+.main-content.expanded {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+.content {
+  position: relative;
+  top: 40px;
+  left: 0;
+  padding: 4% 1%;
+  background-color: #f4f6f9;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+}
+
+/* Button for error page */
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-button:hover {
+  background-color: #00305f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.upload-parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 10px;
+}
+
+.upload-parent > div {
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.link-style {
+  color: #004080;
+  background-color: #E6F2FF; /* Match the background color of the container */
+  font-size: 14px; /* Fixed font size */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: block; /* Make the link block-level to take the full width */
+  position: absolute; /* Position the link absolutely within the div */
+  bottom: 0; /* Position it at the bottom of the container */
+  left: 0; /* Align it to the left side */
+  width: 100%; /* Make the width of the link match the container */
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+.upload-parent > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.upload-div1 { 
+  grid-area: 1 / 1 / 2 / 7;
+  background-color: #004080;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  flex-direction: column;
+}
+
+.upload-div2 {
+  grid-area: 2 / 1 / 3 / 7;  /* Only takes one full-width row */
+  background-color: #E6F2FF;
+  border: 1px solid #cce4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 98%;
+}
+
+.upload-div2:hover {
+  background-color: #d1e8ff;
+  border-color: #004080;
+}
+
+/* New retention graph div - full width before other visualizations */
+.upload-div-retention {
+  grid-area: 3 / 1 / 4 / 7; /* Takes the entire width in row 3 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.upload-div-retention:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+}
+
+/* Adjust other divs to accommodate the retention graph */
+.upload-div3, .upload-div4, .upload-div5, .upload-div6, .upload-div7, .upload-div8 { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.upload-div3:hover, .upload-div4:hover, .upload-div5:hover, 
+.upload-div6:hover, .upload-div7:hover, .upload-div8:hover,
+.upload-div-retention:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+}
+
+/* Adjust the grid placement of other divs to account for the retention graph */
+.upload-div3 { grid-area: 4 / 1 / 5 / 5; }
+.upload-div4 { grid-area: 5 / 1 / 6 / 5; }
+.upload-div5 { grid-area: 4 / 5 / 6 / 7; }
+.upload-div6 { grid-area: 6 / 1 / 7 / 7; }
+.upload-div7 { grid-area: 7 / 1 / 8 / 5; }
+.upload-div8 { grid-area: 7 / 5 / 8 / 7; }
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .upload-parent {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 10px;
+  }
+
+  .upload-div1, .upload-div2, .upload-div3, .upload-div4, .upload-div5, 
+  .upload-div6, .upload-div7, .upload-div8 {
+    grid-area: auto;
+  }
+}
+
+/* Scroll Bar Customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004080;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #013A63;
+}
+
+/* Modal Custom Styling */
+.modal-backdrop {
+  z-index: 1050 !important;  /* Ensure backdrop is below modal */
+  background-color: rgba(0, 0, 0, 0.5); /* Darkens the background */
+  backdrop-filter: blur(50%); /* Optional: Adds blur effect behind modal */
+}
+
+#insight-modal {
+  z-index: 1060 !important; /* Ensure modal has higher z-index */
+  position: fixed !important; /* Make sure it stays fixed on the screen */
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; /* Center the modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Adjust the width of the modal */
+  max-width: 800px; /* Maximum width of the modal */
+  height: 75%; /* Adjust the height of the modal */
+  max-height: 700px; /* Maximum height of the modal */
+  transition: all 1s ease-in-out; /* Smooth transition for opening/closing */
+}
+
+#insight-modal .modal-content {
+  background-color: white; /* Modal content background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%; /* Ensure the content takes up 100% of the modal width */
+  height: 100%; /* Ensure the content takes up 100% of the modal height */
+  font-family: 'Poppins';
+}
+
+#insight-modal .modal-header {
+  background-color: #004080;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#insight-modal .modal-body{
+  padding: 20px;
+  color: #004080;
+  position: relative; /* Ensure button is positioned inside body */
+  flex-grow: 1; /* Allow the body to take up remaining space, pushing the button down */
+  margin-bottom: 20px;
+}
+
+/* Custom close button styles */
+
+.close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.modal-body-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.close-button {
+  display: block;
+  margin: 10px auto;
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+

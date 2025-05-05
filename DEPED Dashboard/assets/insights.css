@@ -1,0 +1,104 @@
+/* insights */
+/* CONTENT STYLES */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: all 0.3s ease-in-out;
+  width: calc(100% - 250px);
+}
+
+.main-content.expanded {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+.content {
+  position: relative;
+  top: 40px;
+  left: 0;
+  padding: 4% 1%;
+  background-color: #f4f6f9;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+}
+
+/* Button for error page */
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-button:hover {
+  background-color: #00305f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.insights-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1% auto(6, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  }
+
+.insights-parent > div {
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.insights-div1 { 
+  grid-area: 1 / 1 / 2 / 5;
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insights-div2, .insights-div3, .insights-div4, .insights-div5, .insights-div6, .insights-div7 { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  background-color: #F0F0F0;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.insights-div1 { grid-area: 1 / 1 / 2 / 6; }
+.insights-div2 { grid-area: 2 / 1 / 3 / 6; }
+.insights-div3 { grid-area: 3 / 1 / 4 / 6; }
+.insights-div4 { grid-area: 4 / 1 / 5 / 6; }
+.insights-div5 { grid-area: 5 / 1 / 6 / 6; }
+.insights-div6 { grid-area: 6 / 1 / 7 / 6; }
+.insights-div7 { grid-area: 7 / 1 / 8 / 6; }
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .insights-parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .insights-div1, .insights-div2, .insights-div3, .insights-div4, .insights-div5, 
+  .insights-div6, .insights-div7 {
+    grid-area: auto;
+  }
+}
